@@ -1,4 +1,4 @@
-{% set version = '0.7.1' %}
+{% set version = "0.7.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/easystats_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/easystats/easystats_{{ version }}.tar.gz
-  sha256: e6b822b725dbd2ed5a129a3fb787a6ef378562b787e4411813bb375d4c1b2522
+  sha256: 6ceb9a75debbc54967d347d1ab4967b3569f21c95089182d18bf77a04bfcd865
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -58,12 +58,8 @@ about:
   home: https://easystats.github.io/easystats/
   dev_url: https://github.com/easystats/easystats/
   license: MIT
-  summary: A meta-package that installs and loads a set of packages from 'easystats' ecosystem
-    in a single step. This collection of packages provide a unifying and consistent
-    framework for statistical modeling, visualization, and reporting. Additionally,
-    it provides articles targeted at instructors for teaching 'easystats', and a dashboard
-    targeted at new R users for easily conducting statistical analysis by accessing
-    summary results, model fit indices, and visualizations with minimal programming.
+  summary: A meta-package that installs and loads a set of packages from 'easystats' ecosystem in a single step. This collection of packages provide a unifying and consistent framework for statistical modeling, visualization, and reporting. Additionally, it provides articles targeted at instructors for teaching 'easystats',
+    and a dashboard targeted at new R users for easily conducting statistical analysis by accessing summary results, model fit indices, and visualizations with minimal programming.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
